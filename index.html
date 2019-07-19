@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elusive button</title>
+  <style>
+    #running-btn {
+      height: 50px;
+      width: 150px;
+      background: pink;
+      position: fixed;
+      transition: all .1s;
+      top: 50px;
+      left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25%;
+      box-shadow: inset 0 4px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    }
+  </style>
+</head>
+<body>
+  <h4 id="msg">Times that you have disappointed your mother. <span id="count">0</span></h4>
+  <div id="running-btn"><strong>Try it</strong></div>
+</body>
+<script>
+  const LIMIT = 20
+  let counter = 0
+  let hoverCount = 0
+  const btn = document.getElementById('running-btn')
+  const count = document.getElementById('count')
+  const msg = document.getElementById('msg')
+
+  btn.onclick = function() {
+    document.body.innerHTML = '<img src="https://miro.medium.com/max/1152/1*Oo-yD7aMoyr5asz8Ysibyg.jpeg" />'
+  }
+
+  btn.onmouseover = function() {
+    if (hoverCount < LIMIT) {
+    //   btn.style.background = '#'+Math.floor(Math.random()*16777215).toString(16);
+      btn.style.top = Math.random() * (window.innerHeight - 100) + 'px'
+      btn.style.left = Math.random() * (window.innerWidth - 100) + 'px'
+      count.innerHTML = hoverCount
+    }
+
+    if (hoverCount > 3 && hoverCount < 5 && hoverCount < LIMIT) {
+      alert(' You suck.')
+    }
+
+    if (hoverCount > 5 && hoverCount < 7 && hoverCount < LIMIT) {
+      alert(' Wow you really suck.')
+    }
+
+    if (hoverCount > 7 && hoverCount < 9 && hoverCount < LIMIT) {
+      alert(' This is just sad.')
+    }
+
+    if (hoverCount > 9 && hoverCount < 11 && hoverCount < LIMIT) {
+      alert(' A monkey with no thumbs could do better.')
+    }
+
+    if (hoverCount > 11 && hoverCount < 13 && hoverCount < LIMIT) {
+      alert(' I have actually seen rocks with faster reactions')
+    }
+
+    if (hoverCount > 13 && hoverCount < 15 && hoverCount < LIMIT) {
+      alert(' Chief called, He said u dumb')
+    }
+
+    if (hoverCount > 17 && hoverCount < 19 && hoverCount < LIMIT) {
+      alert(' Seth Rogan uses the toilet more times in a day than you have IQ points')
+    }
+
+    if (hoverCount == LIMIT) {
+      msg.append(" You are trash.")
+    }
+
+    hoverCount++
+  }
+</script>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Elusive Button</title>
+</head>
+<body>
+        <button id ='bastard' class="btn btn-warning btn btn-primary btn-lg position-absolute">Catch me
+        </button>
+</body>
+<script>
+
+const btn = document.getElementById('bastard').addEventListener("mouseover", move())
+    
+function move () {
+            btn.style.top = (Math.floor(Math.random(10) * 500))
+            btn.style.right = (Math.floor(Math.random(10) * 500))
+        }
+        
+
+// $(document).ready(function() {
+//   $('#btn').hover(function(e) {
+//     var $el = $('#btn'),
+//         offset = $el.offset(),
+//         newtop = offset.top + 25 - Math.random()*50,
+//         newleft = offset.left + 25 - Math.random()*50;
+//     $el.offset({top: newtop, left: newleft});
+//   });
+// });
+    
+          </script>
+</html> -->

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Tangerine&display=swap" rel="stylesheet">
   <title>Elusive button</title>
   <style>
-    #running-btn {
+    /* #bastard {
       height: 50px;
       width: 150px;
       background: pink;
@@ -15,24 +18,296 @@
       justify-content: center;
       align-items: center;
       border-radius: 25%;
-      box-shadow: inset 0 4px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+      box-shadow: inset 0 4px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19); */
+    
+    body{
+  background-image: url("https://wallpaperaccess.com/full/157614.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h4 {
+    color: white;
+    font-family: 'Tangerine', cursive;
+    font-size: 200%;
+}
+
+#button{
+    position: absolute;
+    background-color: #F05313;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 100px;
+    border: 4px solid #F0BB13;
+    color: #F0BB13;
+   font-family: 'Mali', cursive;
+  font-size: 1.4em;
+  transition: width 1s, height 1s, font-size 1s;
+}
+#button:hover{
+  width: 120px;
+  height: 120px;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+.mid{
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+#slogan{
+  padding-top: 30%;
+ 
+}
+
+#ex{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+
+#ex2{
+  display: none;
+  position: absolute;
+  z-index: 999;
+}
+
+.noise1{
+  transform: rotate(50deg);
+}
+.noise2{
+  transform: rotate(-50deg);
+}
+
+.explosion{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  text-align: center;
+  background-color: #eabc17;
+  width: 200px;
+      height: 100px;
+      border-radius: 100px / 50px;
+}
+.explosion2{
+  position: absolute;
+  text-align: center;
+  background-color:#c11d1f;
+  width: 250px;
+      height: 125px;
+      border-radius: 100px / 50px;
+}
+
+
+.rotating {
+		-webkit-animation: rotation 6s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+#kaboom{
+  position: absolute;
+  transform: rotate(-25deg);
+  width: 50px;
+  height: 50px;
+  display: none;
+  font-size: 1.6em;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 1000;
+  z-index: 1001;
+  left: -60px;
+  top: 10px;
+}
+
+.frie{
+  background: #e0b108;
+  width: 60px;
+  height: 15px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 8px;
+  border-width: 3px;
+  position: absolute;
+  z-index: 900;
+}
+
+#bunchFries{
+  display: none;
+}
+
+
+#p1{
+  -webkit-animation: pom1 1.6s infinite linear;
+}
+#p2{
+  -webkit-animation: pom2 1.6s infinite linear;
+}
+#p3{
+  -webkit-animation: pom3 1.6s infinite linear;
+}
+#p4{
+  -webkit-animation: pom4 1.6s infinite linear;
+}
+#p5{
+  -webkit-animation: pom5 1.6s infinite linear;
+}
+#p6{
+  -webkit-animation: pom6 1.6s infinite linear;
+}
+#p7{
+  -webkit-animation: pom7 1.6s infinite linear;
+}
+#p8{
+  -webkit-animation: pom8 1.6s infinite linear;
+}
+
+@keyframes pom1 {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
     }
+    100% {
+        transform: translate3d(-1500px, 0px, 0px);
+    }
+}
+@keyframes pom2 {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translate3d(1500px, 0px, 0px);
+    }
+}
+@keyframes pom3 {
+    0% {
+        transform: translate3d(0px, 0px, 0px) rotate(90deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+       transform: translate3d(0px, 1500px, 0px) rotate(90deg);
+    }
+}
+@keyframes pom4 {
+    0% {
+        transform: translate3d(0px, 0px, 0px) rotate(90deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+       transform: translate3d(0px, -1500px, 0px) rotate(90deg);
+    }
+}
+
+@keyframes pom5 {
+    0% {
+        transform: translate3d(0px, 0px, 0px) rotate(45deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+       transform: translate3d(-1500px, -1500px, 0px) rotate(45deg);
+    }
+}
+
+@keyframes pom6 {
+    0% {
+        transform: translate3d(0px, 0px, 0px) rotate(135deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+       transform: translate3d(1500px, -1500px, 0px) rotate(135deg);
+    }
+}
+
+@keyframes pom7 {
+    0% {
+        transform: translate3d(0px, 0px, 0px) rotate(45deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+       transform: translate3d(1500px, 1500px, 0px) rotate(45deg);
+    }
+}
+
+@keyframes pom8 {
+    0% {
+        transform: translate3d(0px, 0px, 0px) rotate(135deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+       transform: translate3d(-1500px, 1500px, 0px) rotate(135deg);
+    }
+}
   </style>
 </head>
 <body>
+        <div id="button" class="mid" onclick="doExplode()">
+                <div id="slogan" >TRY ME</div>
+              </div>
+              
+              <div id="ex" class="mid rotating">
+                <div class="explosion mid "></div>
+                <div class="explosion mid noise1 "></div>
+                <div class="explosion mid noise2"></div>
+              </div>
+              
+              <div id="ex2" class="mid rotating">
+                <div class="explosion2 mid "></div>
+                <div class="explosion2 mid noise1 "></div>
+                <div class="explosion2 mid noise2"></div>
+              </div>
+              
+              
+              <div class="mid" id="kaboom">KABOOM!</div>
+              
+              <div id="bunchFries">
+                <div class="frie mid" id="p1" style="left: -100px"></div>
+              <div class="frie mid" id="p2"style="left: 100px"></div>
+              <div class="frie mid" id="p5" style="left: -100px;top: -100px; transform: rotate(45deg)"></div>
+              <div class="frie mid" id="p6" style="left: 100px;top: -100px; transform: rotate(-45deg)""></div>
+              <div class="frie mid" id="p7" style="left: 100px;top: 100px; transform: rotate(45deg)"></div>
+              <div class="frie mid" id="p8" style="left: -100px;top: 100px; transform: rotate(-45deg)""></div>
+              <div class="frie mid" id="p3" style="top: -100px; transform: rotate(90deg)"></div>
+              <div class="frie mid" id="p4" style="top: 100px; transform: rotate(90deg)"></div>
+              </div>
+              
   <h4 id="msg">Times that you have disappointed your mother. <span id="count">0</span></h4>
-  <div id="running-btn"><strong>Try it</strong></div>
 </body>
 <script>
   const LIMIT = 20
   let counter = 0
   let hoverCount = 0
-  const btn = document.getElementById('running-btn')
+  const btn = document.getElementById('button')
   const count = document.getElementById('count')
   const msg = document.getElementById('msg')
 
   btn.onclick = function() {
-    document.body.innerHTML = '<img src="https://miro.medium.com/max/1152/1*Oo-yD7aMoyr5asz8Ysibyg.jpeg" />'
+         document.body.innerHTML = '<img src="https://miro.medium.com/max/1152/1*Oo-yD7aMoyr5asz8Ysibyg.jpeg" />'
+         function doExplode(){
+ document.getElementById("button").style.display = 'none';
+  
+  document.getElementById("ex").style.display = 'inline';
+  
+    document.getElementById("ex2").style.display = 'inline';
+    document.getElementById("kaboom").style.display = 'inline';
+  
+   document.getElementById("bunchFries").style.display = 'inline';
+
+}
   }
 
   btn.onmouseover = function() {
@@ -44,31 +319,31 @@
     }
 
     if (hoverCount > 3 && hoverCount < 5 && hoverCount < LIMIT) {
-      alert(' You suck.')
+      msg.append(' You suck.')
     }
 
     if (hoverCount > 5 && hoverCount < 7 && hoverCount < LIMIT) {
-      alert(' Wow you really suck.')
+      msg.append(' Wow you really suck.')
     }
 
     if (hoverCount > 7 && hoverCount < 9 && hoverCount < LIMIT) {
-      alert(' This is just sad.')
+      msg.append(' This is just sad.')
     }
 
     if (hoverCount > 9 && hoverCount < 11 && hoverCount < LIMIT) {
-      alert(' A monkey with no thumbs could do better.')
+      msg.append(' A monkey with no thumbs could do better.')
     }
 
     if (hoverCount > 11 && hoverCount < 13 && hoverCount < LIMIT) {
-      alert(' I have actually seen rocks with faster reactions')
+      msg.append(' I have actually seen rocks with faster reactions')
     }
 
     if (hoverCount > 13 && hoverCount < 15 && hoverCount < LIMIT) {
-      alert(' Chief called, He said u dumb')
+      msg.append(' Chief called, He said u dumb')
     }
 
     if (hoverCount > 17 && hoverCount < 19 && hoverCount < LIMIT) {
-      alert(' Seth Rogan uses the toilet more times in a day than you have IQ points')
+      msg.append(' Seth Rogan uses the toilet more times in a day than you have IQ points')
     }
 
     if (hoverCount == LIMIT) {
